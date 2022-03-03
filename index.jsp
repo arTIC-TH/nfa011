@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*,java.text.*" errorPage="" %>
 <%@include file="connexion.jsp" %>
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
 <head>
     <meta http-equiv="Content-Type"/>
     <title>Page index</title>	
@@ -20,10 +21,15 @@
             out.println("<td>" + resultat.getString("email_cli") + "</td>");
             out.println("<td>" + resultat.getString("tel_cli") + "</td>");
             out.println("<td>" + resultat.getString("date_crea_cli") + "</td>");
-            out.println(</tr>);
-    } catch (SQLException ex) {
-        out.println("SQLException: " + ex.getMessage());
-        out.println("SQLstate: " + (SQLException) ex).getSQLState());
-        out.println("VendorError: " +(SQLException) ex).getErrorCode());
+            out.println("</tr>");
     }
+	} catch (SQLException ex) {
+        out.println("SQLException: " + ex.getMessage());
+        out.println("SQLstate: " + ((SQLException) ex).getSQLState());
+        out.println("VendorError: " +((SQLException) ex).getErrorCode());
+    }
+	
     %>
+</table>
+</body>
+</html>

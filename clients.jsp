@@ -8,6 +8,13 @@
 </head>
 <body>
 <table width='100%' border='0'>
+		<th>Nom</th>
+        <th>Prenom</th>
+        <th>Code Postal</th>
+		<th>Ville</th>
+		<th>Email</th>
+		<th>Telephone</th>
+		<th>Date creation</th>
     <%
     try{
         Statement statement = conn.createStatement();
