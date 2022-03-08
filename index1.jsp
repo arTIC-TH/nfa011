@@ -1,20 +1,13 @@
 <%@ page contentType="text/html; charset=utf-8" language="java" import="java.sql.*,java.text.*" errorPage="" %>
 <%@include file="connexion.jsp" %>
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
 <head>
     <meta http-equiv="Content-Type"/>
-    <title>Page index</title>
-	<link href="style.css" rel="stylesheet" type="text/css"/>
+    <title>Page index</title>	
 </head>
 <body>
-<table width='80%' border='0'>
-		<th>Nom</th>
-        <th>Prénom</th>
-        <th>Code Postal</th>
-		<th>Ville</th>
-		<th>Email</th>
-		<th>Telephone</th>
-		<th>Date creation</th>
+<table width='100%' border='0'>
     <%
     try{
         Statement statement = conn.createStatement();
@@ -28,14 +21,15 @@
             out.println("<td>" + resultat.getString("email_cli") + "</td>");
             out.println("<td>" + resultat.getString("tel_cli") + "</td>");
             out.println("<td>" + resultat.getString("date_crea_cli") + "</td>");
-			out.println("</tr>");
-		}
+            out.println("</tr>");
+    }
 	} catch (SQLException ex) {
         out.println("SQLException: " + ex.getMessage());
         out.println("SQLstate: " + ((SQLException) ex).getSQLState());
         out.println("VendorError: " +((SQLException) ex).getErrorCode());
     }
+	
     %>
-    </table>
+</table>
 </body>
 </html>

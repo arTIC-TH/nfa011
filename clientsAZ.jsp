@@ -18,7 +18,7 @@
     <%
     try{
         Statement statement = conn.createStatement();
-        ResultSet resultat = statement.executeQuery("SELECT * FROM clients ORDER BY id_client DESC");
+        ResultSet resultat = statement.executeQuery("SELECT * FROM clients ORDER BY nom_cli ASC");
         while(resultat.next()){
             out.println("<tr bgcolor='ffd9b3'>");
             out.println("<td>" + resultat.getString("nom_cli") + "</td>");

@@ -1,14 +1,36 @@
+
+
 tbody tr:nth-child(odd) {
-  background-color: #f3f1f7;
+  background-color:  white;
+  font-family: 'Segoe UI';
+  font-size: 10px;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #d7ecea;
+  background-color: #f4f8f8;
+  font-family: 'Segoe UI';
+  font-size: 10px;
+  {
+    background-color: #eeebf3;
+    font-family: 'Segoe UI';
+  }
 }
 
 table {
-  background-color: #e0d7ee;
-  font-style: bold;
-  font-family: Courier;
+  background-color: #eeebf3;
+  font-family: 'Segoe UI';
 }
+
+h1
+{
+  background-color: #ffffff;
+  font-family: 'Segoe UI';
+  font-size: 14px;
+}
+
+label {
+  font : .8em "typewriter", tahoma;
+}
+
+
 

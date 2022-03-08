@@ -8,28 +8,30 @@
 </head>
 <body>
 <table width='80%' border='0'>
-		<th>Nom</th>
-        <th>Prénom</th>
-        <th>Code Postal</th>
-		<th>Ville</th>
-		<th>Email</th>
-		<th>Telephone</th>
-		<th>Date creation</th>
+		<th>Produit</th>
+        <th>Image</th>
+        <th>Date produit</th>
+		<th>Quantite</th>
+		<th>Derniere commande</th>
+		<th>Message produit</th>
     <%
     try{
         Statement statement = conn.createStatement();
-        ResultSet resultat = statement.executeQuery("SELECT * FROM clients ORDER BY id_client DESC");
+        ResultSet resultat = statement.executeQuery("SELECT * FROM produits ORDER BY id_produit" DESC);
         while(resultat.next()){
             out.println("<tr bgcolor='ffd9b3'>");
-            out.println("<td>" + resultat.getString("nom_cli") + "</td>");
-            out.println("<td>" + resultat.getString("prenom_cli") + "</td>");
-            out.println("<td>" + resultat.getString("cp_cli") + "</td>");
-            out.println("<td>" + resultat.getString("ville_cli") + "</td>");
-            out.println("<td>" + resultat.getString("email_cli") + "</td>");
-            out.println("<td>" + resultat.getString("tel_cli") + "</td>");
-            out.println("<td>" + resultat.getString("date_crea_cli") + "</td>");
+            out.println("<td>" + resultat.getString("libelle_court_prod") + 
+			"</td>");
+            out.println("<td><img src=" + resultat.getString("chemin_photo_prod"+"</td>");
+            out.println("<td>" + resultat.getString("date_creat_prod") + "</td>");
+            out.println("<td>" + resultat.getString("quantite_prod") + "</td>");	
+            out.println("<td>" + resultat.getString("date_derniere_commande") + "</td>");
+			out.println("<td>" + resultat.getString("message_prod") + "</td>");
+			
 			out.println("</tr>");
 		}
+
+
 	} catch (SQLException ex) {
         out.println("SQLException: " + ex.getMessage());
         out.println("SQLstate: " + ((SQLException) ex).getSQLState());
