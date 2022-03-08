@@ -54,9 +54,9 @@
          <tr>
             <td>6. Ajouter Produits</td>
             <td>Ajouter produit</td>
-            <td><img src="https://cdn-icons-png.flaticon.com/512/2943/2943255.png" width="18" height="18" alt="OK" /></a></td>
-            <td>AjoutProduit.jsp</td>
-            <td><a href=http://localhost:8181/nfa011/AjoutProduit.jsp> link </a></td>
+            <td><img src="https://i.pinimg.com/564x/5e/6e/28/5e6e28600327c218c6dcc19ecf8caae2.jpg" width="20" height="20" alt="OK" /></a></td>
+            <td>formAjoutProduit.jsp</td>
+            <td><a href=http://localhost:8181/nfa011/formAjoutProduit.jsp> link </a></td>
         </tr>
          <tr>
             <td>7. Afficher Commandes</td>
@@ -84,7 +84,7 @@
             <td>Modifier information du client</td>
             <td><img src="https://cdn-icons-png.flaticon.com/512/2943/2943255.png" width="18" height="18" alt="OK" /></a></td>
             <td>ModifierClient.jsp</td>
-            <td><a href=http://localhost:8181/nfa011/ModifierClient.jsp> link </a></td>
+            <td><a href=http://localhost:8181/nfa011/formUpdateClient.jsp> link </a></td>
         </tr>
         <tr>
             <td>11. Modifier produit</td>
