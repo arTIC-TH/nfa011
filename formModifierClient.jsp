@@ -12,17 +12,21 @@
 
 		<%
 		try{
+			out.println("Select name"\"listeClient\" id=\"listeClient\">";
 			Statement statement = conn.createStatement();
-			ResultSet resultat = statement.executeQuery("SELECT id_client, nom_cli FROM clients ORDER BY id_client");
+			ResultSet resultat = statement.executeQuery("SELECT id_client, nom_cli FROM clients ORDER BY id_client ASC");
 			out.println("<select name='id_client'>");
 			while(resultat.next()){
-				out.println("<option value='" + resultat.getString("id_client") + "'>" + resultat.getString("nom_cli") + "</option>");
-			}
-			out.println("</select>");
-		} catch (SQLException ex) {
-			out.println("SQLException: " + ex.getMessage());
-			out.println("SQLstate: " + ((SQLException) ex).getSQLState());
-			out.println("VendorError: " +((SQLException) ex).getErrorCode());
+				Int id_=resultat.getInt("id_client");
+				out.println("<option value='" + id_"\"> +
+				resultat.getString("nom_cli")+"</option>");
+				}
+			out.println("</select>");		
+		}
+		catch (SQLException ex) {
+		out.println("SQLException: " + ex.getMessage());
+		out.println("SQLstate: " + ((SQLException) ex).getSQLState());
+		out.println("VendorError: " +((SQLException) ex).getErrorCode());
 		}
 		%>
 		

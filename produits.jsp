@@ -17,7 +17,7 @@
     <%
     try{
         Statement statement = conn.createStatement();
-        ResultSet resultat = statement.executeQuery("SELECT * FROM produits ORDER BY id_produit");
+        ResultSet resultat = statement.executeQuery("SELECT * FROM produit ORDER BY id_produit");
         while(resultat.next()){
             out.println("<tr bgcolor='ffd9b3'>");
             out.println("<td>" + resultat.getString("libelle_court_prod") + 

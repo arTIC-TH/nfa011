@@ -8,6 +8,12 @@
 </head>
 <body>
 <table width='80%' border='0'>
+	<th>Id Commande</th>
+    <th>Id Client</th>
+    <th>Date Commande</th>
+	<th>Montant Commande</th>
+	<th>Deleted</th>
+	<th>Date validation</th>
     <%
     try{
         Statement statement = conn.createStatement();

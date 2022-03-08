@@ -9,22 +9,19 @@
         <body>
 
         <%
-            String Produit = request.getParameter("Produit");
-            String Image = request.getParameter("Image");
-            String Fecha = request.getParameter("Fecha");
-            String Quantite = request.getParameter("Quantite");
-            String Derniere = request.getParameter("Derniere");
-            String email = request.getParameter("Message");
-
-           /* out.print(Derniere commande);*/
+            String libelle_court_prod = request.getParameter("libelle_court_prod");
+            String chemin_photo_prod = request.getParameter("chemin_photo_prod");
+            String quantite_prod = request.getParameter("quantite_prod");
+            String message_prod = request.getParameter("message_prod");
            
         try {
 			Statement instruction = conn.createStatement();
-			String SQL = "INSERT INTO produits(libelle_court_prod, chemin_photo_prod, date_creat_prod, quantite_prod, date_derniere_commande, message_prod) VALUES ('"+Produit+"' , '"+Image+"' , '"+Fecha+"' , '"+Quantite+"' , '"+Derniere+"' , '"+Message+"')";
+			String SQL = "INSERT INTO produit(libelle_court_prod, chemin_photo_prod, quantite_prod,  message_prod) 
+            VALUES ('"+libelle_court_prod+"' , '"+chemin_photo_prod+"' , '"+quantite_prod+"' , '"+message_prod+"')";
                out.print(SQL);
                   instruction.executeUpdate(SQL);
                     out.println("Bien ajouté");
-                    out.println("<a href=\"produits.jsp\"_self\">afficher</a>");
+                    out.println("<a href=\"index.jsp\"_self\">afficher</a>");
                     
 			
 		  } catch (Exception ex) {

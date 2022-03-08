@@ -9,7 +9,9 @@
         <body>
 
         <%
-            String id_client = request.getParameter("id_client").value;
+           if(request.getParameter("ajout_form")!=null ){ 
+			
+			int id_client = request.getParameter("id_client").value();
             out.print(id_client);
 			String nom = request.getParameter("nom");
             String prenom = request.getParameter("prenom");
