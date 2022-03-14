@@ -9,10 +9,7 @@
         <body>
 
         <%
-           if(request.getParameter("ajout_form")!=null ){ 
-			
-			int id_client = request.getParameter("id_client").value();
-            out.print(id_client);
+            String id_client = request.getParameter("id_client");
 			String nom = request.getParameter("nom");
             String prenom = request.getParameter("prenom");
             String adresse = request.getParameter("adresse");
@@ -23,13 +20,19 @@
            
         try {
 			Statement instruction = conn.createStatement();
-			String SQL = "SELECT * FROM clients WHERE id_client = + '"+id_client+"')";
+			String SQL = "UPDATE clients SET nom_cli='"+nom+"',"
+			+" prenom_cli='"+prenom+"',"
+			+" adr_cli='"+adresse+"',"
+			+" cp_cli='"+cp+"',"
+			+" ville_cli='"+ville+"',"
+			+" email_cli='"+email+"',"
+			+" tel_cli='"+telephone+"'"+
+			" WHERE id_client = "+id_client;			
             out.print(SQL);
-			ResultSet resultat = statement.executeQuery(SQL);
-			while(resultat.next()){
-				nom.value = resultat.getString("nom_cli");
-				prenom.value = resultat.getString("prenom_cli");
-			}                    
+            instruction.executeUpdate(SQL);
+                    out.println("Bien mise à jour");
+                    out.println("<a href=\"clients.jsp\"_self\">afficher</a>");
+                    
 			
 		  } catch (Exception ex) {
 			out.println("SQLException: " + ex.getMessage());

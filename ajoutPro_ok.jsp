@@ -13,11 +13,10 @@
             String chemin_photo_prod = request.getParameter("chemin_photo_prod");
             String quantite_prod = request.getParameter("quantite_prod");
             String message_prod = request.getParameter("message_prod");
-           
+            out.print(libelle_court_prod);
         try {
 			Statement instruction = conn.createStatement();
-			String SQL = "INSERT INTO produit(libelle_court_prod, chemin_photo_prod, quantite_prod,  message_prod) 
-            VALUES ('"+libelle_court_prod+"' , '"+chemin_photo_prod+"' , '"+quantite_prod+"' , '"+message_prod+"')";
+			String SQL = "INSERT INTO produit(libelle_court_prod, chemin_photo_prod, quantite_prod,  message_prod) VALUES ('"+libelle_court_prod+"' , '"+chemin_photo_prod+"' , '"+quantite_prod+"' , '"+message_prod+"')";
                out.print(SQL);
                   instruction.executeUpdate(SQL);
                     out.println("Bien ajouté");

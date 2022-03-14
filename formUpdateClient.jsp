@@ -9,7 +9,7 @@
     </head>
     
 <body>
-
+		<form action="chercheCliParNom_ok.jsp" method="post" name="ajout_form">
 		<%
 		try{
 			Statement statement = conn.createStatement();
@@ -26,37 +26,10 @@
 		}
 		%>
 		
-		<form action="updateCli_ok.jsp" method="post">
-			<button type="submit" name="button" value="button1">Montrer detail client</button>
+			<input type="submit" value="Montrer detail client" id="bouton_detail"/>
 		</form>		
 		
-        <form action="ajoutCli_ok.jsp" method="post" name="ajout_form" >
-			
-			<label for="nom">Nom</label><br>
-            <input type="text"  name="nom" required="required" placeholder="Votre nom"><br><br>
-            
-            <label for="prenom">Prenom</label><br>
-            <input type="text"  name="prenom" required="required" placeholder="Votre Prenom"><br><br>
-
-            <label for="adress">Adresse</label><br>
-            <input type="text"  name="adresse" required="required" placeholder="Votre Adresse"><br><br>
-
-            <label for="codePostal">CP</label><br>
-            <input type="text"  name="cp" id="cp" required="required" placeholder="Votre Code Postal"><br><br>
-
-            <label for="Ville">Ville</label><br>
-            <input type="text"  name="ville" required="required" placeholder="Votre telephone"><br><br>
-
-            <label for="email">Email</label><br>
-            <input type="text"  name="email" required="required" placeholder="Votre email"><br><br>
-
-            <label for="telephone">Tel</label><br>
-            <input type="text"  name="telephone" required="required" placeholder="Votre telephone"><br><br>
-
-
-           <input type="submit" value="Valider l'actualisation" id="bouton_envoi"><br><br>
-            
-        </form><br><br>
+        <br><br>
 </body> 
 
 </html>
