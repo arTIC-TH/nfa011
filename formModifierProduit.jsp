@@ -3,13 +3,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Formulaire de Produit</title>
+        <title>Formulaire de Contact</title>
         <meta charset="UTF=8"/>
         <link rel="stylesheet" href="style.css" />
     </head>
     
 <body>
-		<form action="chercheCliParNom_ok.jsp" method="post" name="ajout_form">
+		<form action="chercheProParNom_ok.jsp" method="post" name="ajout_form">
 		<%
 		try{
 			Statement statement = conn.createStatement();

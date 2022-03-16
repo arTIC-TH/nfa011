@@ -3,20 +3,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Formulaire de Produit</title>
+        <title>Formulaire de Contact</title>
         <meta charset="UTF=8"/>
         <link rel="stylesheet" href="style.css" />
     </head>
     
 <body>
-		<form action="chercheCliParNom_ok.jsp" method="post" name="ajout_form">
+		<form action="chercheProParNom_ok.jsp" method="post" name="ajout_form">
 		<%
 		try{
 			Statement statement = conn.createStatement();
-			ResultSet resultat = statement.executeQuery("SELECT id_client, nom_cli FROM clients ORDER BY id_client");
-			out.println("<select name='id_client'>");
+			ResultSet resultat = statement.executeQuery("SELECT id_produit, libelle_court_prod FROM produit ORDER BY id_produit");
+			out.println("<select name='id_produit'>");
 			while(resultat.next()){
-				out.println("<option value='" + resultat.getString("id_client") + "'>" + resultat.getString("nom_cli") + "</option>");
+				out.println("<option value='" + resultat.getString("id_produit") + "'>" + resultat.getString("libelle_court_prod") + "</option>");
 			}
 			out.println("</select>");
 		} catch (SQLException ex) {
@@ -26,7 +26,7 @@
 		}
 		%>
 		
-			<input type="submit" value="Montrer detail client" id="bouton_detail"/>
+			<input type="submit" value="Montrer detail produit" id="bouton_detail"/>
 		</form>		
 		
         <br><br>

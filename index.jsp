@@ -54,7 +54,7 @@
          <tr>
             <td>6. Ajouter Produits</td>
             <td>Ajouter produit</td>
-			<td><img src="https://cdn-icons-png.flaticon.com/512/2943/2943255.png" width="18" height="18" alt="OK" /></a></td>
+			<td><img src="https://i.pinimg.com/564x/5e/6e/28/5e6e28600327c218c6dcc19ecf8caae2.jpg" width="20" height="20" alt="OK" /></a></td>
             <td>formAjoutProduit.jsp</td>
             <td><a href=http://localhost:8181/nfa011/formAjoutProduit.jsp> link </a></td>
         </tr>
@@ -81,17 +81,17 @@
         </tr>
         <tr>
             <td>10. Modifier Client </td>
-            <td>Modifier information du client</td>
-            <td><img src="https://cdn-icons-png.flaticon.com/512/2943/2943255.png" width="18" height="18" alt="OK" /></a></td>
-            <td>ModifierClient.jsp</td>
+            <td>Modifier information de client</td>
+            <td><img src="https://i.pinimg.com/564x/5e/6e/28/5e6e28600327c218c6dcc19ecf8caae2.jpg" width="20" height="20" alt="OK" /></a></td>
+            <td>formUpdateClient.jsp</td>
             <td><a href=http://localhost:8181/nfa011/formUpdateClient.jsp> link </a></td>
         </tr>
         <tr>
             <td>11. Modifier produit</td>
-            <td>Modifier produits</td>
+            <td>Modifier information de produit</td>
             <td><img src="https://cdn-icons-png.flaticon.com/512/2943/2943255.png" width="18" height="18" alt="OK" /></a></td>
-            <td>ModifierProduit.jsp</td>
-            <td><a href=http://localhost:8181/nfa011/ModifierProduit.jsp> link </a></td>
+            <td>formUpdateProduit.jsp</td>
+            <td><a href=http://localhost:8181/nfa011/formUpdateProduit.jsp> link </a></td>
         </tr>
     </table>
 </div>
