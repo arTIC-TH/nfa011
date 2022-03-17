@@ -11,10 +11,11 @@
         <%  
 			
 			String id_produit = request.getParameter("id_produit");
-           
+            out.println(id_produit);
         try {
 			Statement instruction = conn.createStatement();
-			String SQL = "SELECT * FROM produit, prix WHERE produit.id_produit = prix.id_produit and produit.id_produit = "+id_produit;
+			String SQL = "SELECT * FROM produit left join prix on produit.id_produit = prix.id_produit WHERE produit.id_produit = "+id_produit;
+			out.println(SQL);
 			ResultSet resultat = instruction.executeQuery(SQL);
 			while(resultat.next()){
 				out.println("<input readonly type='text' name='id_produit' value='"+resultat.getString("id_produit")+"'/>");
