@@ -28,6 +28,7 @@
             out.println("<td>" + resultat.getString("email_cli") + "</td>");
             out.println("<td>" + resultat.getString("tel_cli") + "</td>");
             out.println("<td>" + resultat.getString("date_crea_cli") + "</td>");
+            out.println("<td><a href=http://localhost:8181/nfa011/commande.jsp?id_client=" + resultat.getString("id_client") + "> commandes </a></td>");
 			out.println("</tr>");
 		}
 	} catch (SQLException ex) {

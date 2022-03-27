@@ -13,7 +13,7 @@
     String Ville = request.getParameter("ville");
     String mail = request.getParameter("email");
     String tel = request.getParameter("tel");
- %>   
+
     try{
     Statement instruction = con.createStatement();
     String SQL="INSERT TO clients (nom_cli, prenom_cli,adr_cli,ville_cli,email_cli,tel_cli) VALUES

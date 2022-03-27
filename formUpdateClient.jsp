@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Formulaire de Produit</title>
+        <title>Formulaire de Client</title>
         <meta charset="UTF=8"/>
         <link rel="stylesheet" href="style.css" />
     </head>

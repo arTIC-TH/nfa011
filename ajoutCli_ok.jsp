@@ -22,10 +22,11 @@
         try {
 			Statement instruction = conn.createStatement();
 			String SQL = "INSERT INTO clients(nom_cli, prenom_cli, adr_cli, cp_cli, ville_cli, email_cli, tel_cli) VALUES ('"+nom+"' , '"+prenom+"' , '"+adresse+"' , '"+cp+"' , '"+ville+"' , '"+email+"' , '"+telephone+"')";
-               out.print(SQL);
-                  instruction.executeUpdate(SQL);
-                    out.println("Bien ajouté");
-                    out.println("<a href=\"clients.jsp\"_self\">afficher</a>");
+            // siguiente linea para llevar traza
+            out.print(SQL);
+            instruction.executeUpdate(SQL);
+            out.println("Bien ajouté");
+            out.println("<a href=\"clients.jsp\"_self\">afficher</a>");
                     
 			
 		  } catch (Exception ex) {

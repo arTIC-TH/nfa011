@@ -10,8 +10,12 @@
 <table width='80%' border='0'>
     <%
     try{
+        String id_comm = request.getParameter("id_comm");
+        if( id_comm != null && id_comm != ""){
+            id_comm = "WHERE id_comm = "+id_comm;
+        }
         Statement statement = conn.createStatement();
-        ResultSet resultat = statement.executeQuery("SELECT * FROM detail_commande ORDER BY id_comm DESC");
+        ResultSet resultat = statement.executeQuery("SELECT * FROM detail_commande " + id_comm + " ORDER BY id_comm DESC");
         while(resultat.next()){
             out.println("<tr bgcolor='ffd9b3'>");
             out.println("<td>" + resultat.getString("id_detail_DC") + "</td>");
