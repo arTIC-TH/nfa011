@@ -7,6 +7,7 @@
 	<link href="style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+<form method="post">
 <table width='80%' border='0'>
 		<th>Nom</th>
         <th>Prénom</th>
@@ -15,6 +16,10 @@
 		<th>Email</th>
 		<th>Telephone</th>
 		<th>Date creation</th>
+        <th>Commande client</th>
+        <th>Supprimer client</th>
+        <th>Edit</th>
+        <th>Edit boton</th>
     <%
     try{
         Statement statement = conn.createStatement();
@@ -29,6 +34,9 @@
             out.println("<td>" + resultat.getString("tel_cli") + "</td>");
             out.println("<td>" + resultat.getString("date_crea_cli") + "</td>");
             out.println("<td><a href=http://localhost:8181/nfa011/commande.jsp?id_client=" + resultat.getString("id_client") + "> commandes </a></td>");
+            out.println("<td><a href=http://localhost:8181/nfa011/deletecli.jsp?id_client=" + resultat.getString("id_client") + "> Supprimer Client </a></td>");
+             out.println("<td><a href=http://localhost:8181/nfa011/chercheCliParNom_ok.jsp?id_client=" + resultat.getString("id_client") + "> Edit </a></td>");
+            out.println("<td><button type='summit' formaction='http://localhost:8181/nfa011/chercheCliParNom_ok.jsp?id_client=" + resultat.getString("id_client")+"'>edit</button> </td>");
 			out.println("</tr>");
 		}
 	} catch (SQLException ex) {
@@ -38,5 +46,6 @@
     }
     %>
     </table>
+    </form>
 </body>
 </html>

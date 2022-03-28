@@ -25,8 +25,7 @@
         ResultSet resultat = statement.executeQuery("SELECT * FROM produit ORDER BY id_produit");
         while(resultat.next()){
             out.println("<tr bgcolor='ffd9b3'>");
-            out.println("<td>" + resultat.getString("libelle_court_prod") + 
-			"</td>");
+            out.println("<td>" + resultat.getString("libelle_court_prod") + "</td>");
             out.println("<td><a href=" + resultat.getString("chemin_photo_prod")+"> image </a>"+"</td>");
             out.println("<td>" + resultat.getString("date_creat_prod") + "</td>");
             out.println("<td>" + resultat.getString("quantite_prod") + "</td>");	
@@ -37,7 +36,6 @@
             out.println("<td><button type='summit' formaction='http://localhost:8181/nfa011/chercheProParNom_ok.jsp?id_produit=" + resultat.getString("id_produit")+"'>edit</button> </td>");
 			out.println("</tr>");
 		}
-
 
 	} catch (SQLException ex) {
         out.println("SQLException: " + ex.getMessage());

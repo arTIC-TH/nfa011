@@ -16,16 +16,9 @@
 	<th>Date validation</th>
     <%
     try{
-        String id_client = request.getParameter("id_client");
-        if( id_client != null && id_client != ""){
-            id_client = "WHERE id_client = "+id_client;
-        }else{
-            id_client="";
-        }
-       out.println(id_client);
-        Statement statement = conn.createStatement();
-        ResultSet resultat = statement.executeQuery("SELECT * FROM commande " + id_client + " ORDER BY id_comm DESC");
-        while(resultat.next()){
+            Statement statement = conn.createStatement();
+            ResultSet resultat = statement.executeQuery("SELECT * FROM commande ORDER BY id_comm DESC");
+            while(resultat.next()){
             out.println("<tr bgcolor='ffd9b3'>");
             out.println("<td>" + resultat.getString("id_comm") + "</td>");
             out.println("<td>" + resultat.getString("id_client") + "</td>");
